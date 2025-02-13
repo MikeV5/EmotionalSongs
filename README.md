@@ -18,19 +18,3 @@ EmotionalSongs è un'applicazione client-server che permette agli utenti di anno
 ## Requisiti di Sistema
 - **OS:** Windows, Linux, MacOS
 - **JDK:** Versione 17 o superiore
-
-## Installazione e Avvio
-1. Clona il repository:
-   ```sh
-   git clone https://github.com/tuo-utente/EmotionalSongs.git
-   ```
-2. Configura il database PostgreSQL.
-3. Compila ed esegui il server:
-   ```sh
-   mvn clean install
-   java -jar EmotionalSongs-Server.jar
-   ```
-4. Avvia il client:
-   ```sh
-   java -jar EmotionalSongs-Client.jar
-   ```
