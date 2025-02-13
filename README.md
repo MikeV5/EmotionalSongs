@@ -14,7 +14,3 @@ Applicazione client-server che permette agli utenti di annotare e organizzare em
 - **Server:** Gestisce le richieste del client e interagisce con il database.
 - **Database:** Memorizza le informazioni relative ai brani, utenti e valutazioni.
 - **DBCreator:** Script per la creazione e gestione del database.
-
-## Requisiti di Sistema
-- **OS:** Windows, Linux, MacOS
-- **JDK:** Versione 17 o superiore
