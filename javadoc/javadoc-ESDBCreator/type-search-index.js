@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"dbcreator","l":"DBCreator"},{"p":"dbcreator","l":"EmotionalSongsDBController"},{"p":"dbcreator","l":"MainAplication"}];updateSearchResults();

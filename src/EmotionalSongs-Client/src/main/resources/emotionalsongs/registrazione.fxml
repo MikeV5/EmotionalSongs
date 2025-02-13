@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emotionalsongs.RegistrazioneController">
+	<center>
+		<AnchorPane prefHeight="600.0" prefWidth="390.0" style="-fx-background-color: #25273e;" BorderPane.alignment="CENTER">
+			<children>
+				<Label layoutX="44.0" layoutY="41.0" prefHeight="56.0" prefWidth="276.0" text="Registrazione" textFill="WHITE">
+					<font>
+						<Font name="System Bold" size="36.0" />
+					</font>
+				</Label>
+				<TextField fx:id="nomeField" layoutX="47.0" layoutY="121.0" onKeyTyped="#maxLengthNome" prefHeight="37.0" prefWidth="174.0" promptText="Nome" style="-fx-border-color: #ee3a57; -fx-background-color: #25273e; -fx-border-radius: 15; -fx-text-fill: #fafcf7;">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="cognomeField" layoutX="232.0" layoutY="121.0" onKeyTyped="#maxLengthCognome" prefHeight="37.0" prefWidth="174.0" promptText="Cognome" style="-fx-border-color: #ee3a57; -fx-background-color: #25273e; -fx-border-radius: 15; -fx-text-fill: #fafcf7;">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="codFiscaleField" layoutX="44.0" layoutY="182.0" onKeyTyped="#maxLengthCodFisc" prefHeight="37.0" prefWidth="363.0" promptText="Codice Fiscale" style="-fx-border-color: #ee3a57; -fx-background-color: #25273e; -fx-border-radius: 15; -fx-text-fill: #fafcf7;">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="indirizzoField" layoutX="44.0" layoutY="244.0" onKeyTyped="#maxLengthIndirizzo" prefHeight="37.0" prefWidth="363.0" promptText="Indirizzo " style="-fx-border-color: #ee3a57; -fx-background-color: #25273e; -fx-border-radius: 15; -fx-text-fill: #fafcf7;">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="emailField" layoutX="44.0" layoutY="304.0" onKeyTyped="#maxLengthEmail" prefHeight="37.0" prefWidth="363.0" promptText="Email" style="-fx-border-color: #ee3a57; -fx-background-color: #25273e; -fx-border-radius: 15; -fx-text-fill: #fafcf7;">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="userIDField" layoutX="43.0" layoutY="364.0" onKeyTyped="#maxLengthUserID" prefHeight="37.0" prefWidth="363.0" promptText="UserID" style="-fx-border-color: #ee3a57; -fx-background-color: #25273e; -fx-border-radius: 15; -fx-text-fill: #fafcf7;">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</TextField>
+				<PasswordField fx:id="passwordField" layoutX="46.0" layoutY="425.0" onKeyTyped="#maxLengthPassword" prefHeight="37.0" prefWidth="357.0" promptText="Password" style="-fx-border-color: #ee3a57; -fx-background-color: #25273e; -fx-border-radius: 15; -fx-text-fill: #fafcf7;">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</PasswordField>
+				<PasswordField fx:id="confPasswordField" layoutX="46.0" layoutY="486.0" onKeyTyped="#maxLengthConfPassword" prefHeight="37.0" prefWidth="359.0" promptText="Conferma password" style="-fx-border-color: #ee3a57; -fx-background-color: #25273e; -fx-border-radius: 15; -fx-text-fill: #fafcf7;">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</PasswordField>
+				<Button fx:id="confReg" layoutX="134.0" layoutY="567.0" mnemonicParsing="false" onAction="#registrazione" prefHeight="48.0" prefWidth="169.0" style="-fx-background-color: #ee3a57;" text="Conferma" textFill="WHITE">
+					<font>
+						<Font name="System Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="back" alignment="TOP_LEFT" layoutX="48.0" layoutY="566.0" mnemonicParsing="false" onAction="#tornaLogin" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: #ee3a57;" text="←" textFill="WHITE">
+					<font>
+						<Font size="23.0" />
+					</font>
+				</Button>
+				<Label fx:id="wrongConfPassLabel" layoutX="48.0" layoutY="526.0" prefHeight="17.0" prefWidth="359.0" textFill="RED">
+					<font>
+						<Font size="12.0" />
+					</font>
+				</Label>
+            <Label fx:id="wrongNomeLabel" layoutX="47.0" layoutY="157.0" prefHeight="20.0" prefWidth="169.0" textFill="RED">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrongCodFiscLabel" layoutX="48.0" layoutY="222.0" prefHeight="17.0" prefWidth="359.0" textFill="RED">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrongIndLabel" layoutX="48.0" layoutY="283.0" prefHeight="17.0" prefWidth="359.0" textFill="RED">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrongUserIDLabel" layoutX="45.0" layoutY="403.0" prefHeight="17.0" prefWidth="359.0" textFill="RED">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrongEmailLabel" layoutX="48.0" layoutY="343.0" prefHeight="17.0" prefWidth="359.0" textFill="RED">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrongPassLabel" layoutX="45.0" layoutY="464.0" prefHeight="17.0" prefWidth="359.0" textFill="RED">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrongCognomeLabel" layoutX="234.0" layoutY="157.0" prefHeight="20.0" prefWidth="172.0" textFill="RED">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>

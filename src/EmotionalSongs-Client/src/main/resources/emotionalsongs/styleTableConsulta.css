@@ -1,0 +1,23 @@
+.text-area .content{
+     -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);
+
+  }
+
+.chart-plot-background {
+   -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);
+}
+/*
+.axis:left {
+    -fx-tick-label-font-size: 1.6em;
+}
+*/
+.axis{
+  -fx-tick-label-font-size: 0.9em;
+}
+
+.chart-bar {
+-fx-bar-fill: #abdbe3}
+
+.chart-legend {
+    -fx-padding: 2px;
+}

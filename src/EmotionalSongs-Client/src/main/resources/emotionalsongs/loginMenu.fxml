@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emotionalsongs.LoginController">
+   <center>
+      <AnchorPane prefHeight="650.0" prefWidth="450.0" style="-fx-background-color: #25273e;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="buttonAccedi" layoutX="148.0" layoutY="423.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="39.0" prefWidth="156.0" style="-fx-background-color: #ee3a57;" text="Accedi" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonRegistrati" layoutX="148.0" layoutY="484.0" mnemonicParsing="false" onAction="#userRegistrazione" prefHeight="39.0" prefWidth="156.0" style="-fx-background-color: #ee3a57;" text="Registrati" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="testLabel" layoutX="49.0" layoutY="109.0" prefHeight="50.0" prefWidth="278.0" text="Emotional Songs" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userTextField" layoutX="79.0" layoutY="208.0" onKeyPressed="#pressedEnter" prefHeight="33.0" prefWidth="294.0" promptText="Username" style="-fx-background-color: #25273e; -fx-border-color: #494974; -fx-text-fill: #fafcf7; -fx-border-radius: 15;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordField" layoutX="79.0" layoutY="273.0" onKeyPressed="#pressedEnter" prefHeight="25.0" prefWidth="294.0" promptText="Password" style="-fx-border-color: #494974; -fx-background-color: #25273e; -fx-border-radius: 15; -fx-text-fill: #fafcf7;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="wrongLoginLabel" layoutX="79.0" layoutY="329.0" prefHeight="17.0" prefWidth="294.0" textFill="#fc0000">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Button fx:id="buttonConsulta" layoutX="73.0" layoutY="361.0" mnemonicParsing="false" onAction="#consultaCanzoni" prefHeight="39.0" prefWidth="305.0" style="-fx-background-color: #ee3a57;" text="Consulta informazioni di canzoni" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="261.0" layoutY="574.0" mnemonicParsing="false" onAction="#configServer" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);" text="Configurazione Server" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="128.0" fitWidth="193.0" layoutX="305.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+               </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

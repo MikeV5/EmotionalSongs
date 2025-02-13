@@ -1,0 +1,17 @@
+.chart {
+	-fx-text-fill: white;
+}
+.chart-content {
+	-fx-padding: 15px;
+}
+.char-bar{
+-fx-background-color: white;
+}
+.chart-title {
+	-fx-text-fill: white;
+	-fx-font-size: 1.6em;
+}
+
+.axis-label {
+	-fx-text-fill: white;
+}

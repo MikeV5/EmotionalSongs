@@ -1,0 +1,13 @@
+
+.bAnnulla:hover {
+  -fx-text-fill: #f22c2c;
+}
+
+.bSalva:hover {
+  -fx-text-fill: #ebebeb;
+}
+
+ .table-column {  -fx-alignment: CENTER_LEFT; } 
+ .text-area{
+ 
+ }

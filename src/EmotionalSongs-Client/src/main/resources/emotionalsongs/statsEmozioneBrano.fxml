@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="730.0" style="-fx-background-color: #25273e;" stylesheets="@styleTableConsulta.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emotionalsongs.StatsEmozioneBranoController">
+   <center>
+      <Group BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="ap" layoutX="-1.0" prefHeight="730.0" prefWidth="730.0">
+               <children>
+                  <Button fx:id="btnPlay" layoutX="115.0" layoutY="111.0" mnemonicParsing="false" onMouseClicked="#playSong" prefHeight="35.0" prefWidth="68.0" style="-fx-background-color: #ee3a57;" text="PLAY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="186.0" layoutY="111.0" mnemonicParsing="false" onMouseClicked="#pauseSong" prefHeight="35.0" prefWidth="68.0" style="-fx-background-color: #ee3a57;" text="PAUSE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ProgressBar fx:id="progressBarSong" layoutX="112.0" layoutY="53.0" prefHeight="13.0" prefWidth="515.0" progress="0.0" />
+                  <Label fx:id="minsLabel" alignment="CENTER_RIGHT" layoutX="110.0" layoutY="66.0" prefHeight="17.0" prefWidth="16.0" text="00" textFill="WHITE" />
+                  <Label fx:id="secondsLabel" layoutX="133.0" layoutY="66.0" prefHeight="17.0" prefWidth="49.0" text="00" textFill="WHITE" />
+                  <Label fx:id="labelSong11" layoutX="128.0" layoutY="65.0" prefHeight="17.0" prefWidth="7.0" text=":" textFill="WHITE" />
+                  <Label fx:id="durataSongLabel" alignment="CENTER_RIGHT" layoutX="557.0" layoutY="66.0" prefHeight="17.0" prefWidth="69.0" text="00" textFill="WHITE" />
+                  <Label fx:id="canzoneLabel" alignment="TOP_LEFT" layoutX="112.0" layoutY="31.0" prefHeight="21.0" prefWidth="368.0" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="labelUserEmotions" layoutX="117.0" layoutY="152.0" prefHeight="17.0" prefWidth="267.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <BarChart fx:id="barChartEmotions" layoutX="54.0" layoutY="389.0" prefHeight="298.0" prefWidth="597.0" styleClass="chart" stylesheets="@styleBarChart.css" title="Emotion Statistics">
+                    <xAxis>
+                      <CategoryAxis fx:id="asseXCategoryEmotions" prefHeight="49.0" prefWidth="508.0" side="BOTTOM" tickLabelFill="WHITE" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="asseYMediaScore" label="Media Score" prefHeight="291.0" prefWidth="49.0" side="LEFT" stylesheets="@styleBarChart.css" tickLabelFill="WHITE">
+                           <tickLabelFont>
+                              <Font size="9.0" />
+                           </tickLabelFont>
+                        </NumberAxis>
+                    </yAxis>
+                  </BarChart>
+                  <TableView fx:id="mediaEmotionTable" editable="false" layoutX="115.0" layoutY="172.0" prefHeight="214.0" prefWidth="515.0">
+                    <columns>
+                      <TableColumn fx:id="emotionCol" prefWidth="91.0" style="-fx-alignment: CENTER_LEFT;-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);" text="Emotion" />
+                      <TableColumn fx:id="mediaCol" minWidth="0.0" prefWidth="66.0" style="-fx-alignment: CENTER; -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);" text="Media" />
+                        <TableColumn fx:id="numUtentiCol" minWidth="0.0" prefWidth="52.0" style="-fx-alignment: CENTER; -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);" text="Utenti" />
+                        <TableColumn fx:id="commentiCol" editable="false" prefWidth="291.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);" text="Commenti" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="userLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="466.0" layoutY="21.0" prefHeight="17.0" prefWidth="159.0" textFill="#c3c3c3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Button layoutX="21.0" layoutY="53.0" mnemonicParsing="false" onAction="#tornaScena" prefHeight="35.0" prefWidth="61.0" style="-fx-background-color: #ee3a57;" text="←" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="scrittaEmotionsLabel" layoutX="503.0" layoutY="83.0" prefHeight="17.0" prefWidth="125.0" text="I miei punteggi" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fx:id="scrollPaneEmotions" hbarPolicy="NEVER" layoutX="502.0" layoutY="106.0" prefHeight="60.0" prefWidth="126.0">
+                     <content>
+                        <Label fx:id="myEmotionsLabel" alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="60.0" prefWidth="110.0" style="-fx-padding: 2px 5px; -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);" wrapText="true" />
+                     </content>
+                  </ScrollPane>
+                  <Button layoutX="257.0" layoutY="111.0" mnemonicParsing="false" onMouseClicked="#resetSong" prefHeight="35.0" prefWidth="68.0" style="-fx-background-color: #ee3a57;" text="RESET" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="rimuoviEmotionsButton" layoutX="403.0" layoutY="89.0" mnemonicParsing="false" onAction="#rimuoviEmotions" prefHeight="77.0" prefWidth="88.0" style="-fx-background-color: #ee3a57;" text="Rimuovi&#10;i miei&#10;punteggi" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="labelUserEmotions1" layoutX="126.0" layoutY="162.0" prefHeight="17.0" prefWidth="267.0" textFill="WHITE" />
+                  <Label fx:id="infoMyEmotionsLabel" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="353.0" layoutY="103.0" prefHeight="42.0" prefWidth="275.0" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </Group>
+   </center>
+</BorderPane>

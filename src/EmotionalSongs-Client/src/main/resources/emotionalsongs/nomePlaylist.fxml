@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="450.0" style="-fx-background-color: #25273e;" stylesheets="@styleButton.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emotionalsongs.NomePlaylistController">
+	<center>
+		<AnchorPane prefHeight="579.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+			<children>
+				<TextField fx:id="playlistTextField" layoutX="68.0" layoutY="276.0" prefHeight="25.0" prefWidth="315.0" />
+				<Button fx:id="annulla" layoutX="109.0" layoutY="318.0" mnemonicParsing="false" onAction="#annullaNamePlaylist" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: transparent;" styleClass="bAnnulla" text="Annulla" textFill="#ee6363">
+					<font>
+						<Font name="System Bold" size="15.0" />
+					</font>
+				</Button>
+				<Button fx:id="salvaPlaylist" layoutX="234.0" layoutY="318.0" mnemonicParsing="false" onAction="#registraPlaylist" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: transparent;" styleClass="bSalva" text="Salva" textFill="#868181">
+					<font>
+						<Font name="System Bold" size="15.0" />
+					</font>
+				</Button>
+				<Label alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="190.0" prefHeight="48.0" prefWidth="233.0" text="Nome della playlist" textFill="WHITE">
+					<font>
+						<Font name="System Bold" size="22.0" />
+					</font>
+				</Label>
+				<Label fx:id="userLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="170.0" layoutY="28.0" prefHeight="21.0" prefWidth="213.0" textFill="#c3c2c2">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Label>
+				<Label fx:id="erroreLabel" layoutX="81.0" layoutY="308.0" prefHeight="17.0" prefWidth="171.0" textFill="RED" />
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>
