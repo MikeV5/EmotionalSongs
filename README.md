@@ -1,6 +1,6 @@
 # EmotionalSongs
 
-EmotionalSongs è un'applicazione client-server che permette agli utenti di annotare e organizzare emozioni associate a brani musicali. Gli utenti possono valutare le emozioni provate per ciascun brano e creare playlist personalizzate. L'applicazione fornisce anche un riepilogo delle emozioni aggregate per ogni brano.
+Applicazione client-server che permette agli utenti di annotare e organizzare emozioni associate a brani musicali. Gli utenti possono valutare le emozioni provate per ciascun brano e creare playlist personalizzate. L'applicazione fornisce anche un riepilogo delle emozioni aggregate per ogni brano.
 
 ## Tecnologie Utilizzate
 - **Linguaggi:** Java, SQL
